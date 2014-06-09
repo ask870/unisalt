@@ -1,0 +1,5 @@
+auto eth0:0
+iface eth0:0 inet static
+address {{ pillar['private_ip'] }}
+netmask 255.255.128.0
+

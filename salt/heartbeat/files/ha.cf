@@ -1,0 +1,14 @@
+autojoin none
+logfacility daemon
+keepalive 2
+deadtime 15
+warntime 5
+initdead 120
+udpport 694
+{% for node in pillar['nodes'] %}{% for name, ip in node.items() %}ucast eth0 {{ ip }}
+node {{ name }}{% endfor %}
+{% endfor %}
+auto_failback on
+use_logd yes
+crm respawn
+

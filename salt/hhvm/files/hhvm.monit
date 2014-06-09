@@ -1,0 +1,4 @@
+check process hhvm with pidfile /var/run/hhvm/pid
+start program = "/usr/sbin/service hhvm start"
+stop program = "/usr/sbin/service hhvm stop"
+
